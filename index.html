@@ -3,27 +3,48 @@
   <head>
     <meta charset="UTF-8">
     <title>Iframe de ejemplo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+      /* Estilos generales */
+      body {
+        background-color: #121524;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
       /* Estilos para el modo oscuro */
       body.dark-mode {
         background-color: #121524;
         color: white;
       }
-      body.dark-mode iframe,
-      body.dark-mode .adsbygoogle {
+      body:not(.dark-mode) {
+        background-color: white;
+        color: black;
+      }
+      /* Estilos para dispositivos móviles */
+      .ads-container {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      iframe {
+        width: 100%;
+        height: 500px;
+        display: block;
+        margin: 0 auto;
+      }
+      /* Estilos para el modo oscuro en dispositivos móviles */
+      body.dark-mode .ads-container,
+      body.dark-mode iframe {
         background-color: #121524;
+      }
+      body:not(.dark-mode) .ads-container,
+      body:not(.dark-mode) iframe {
+        background-color: white;
       }
     </style>
   </head>
   <body class="dark-mode">
-    <iframe
-      src="https://luisocana44-docbrain.hf.space"
-      frameborder="0"
-      width="80%"
-      height="1500"
-      style="float:left;"
-    ></iframe>
-    <div style="float:right;width:20%;height:800px;">
+    <div class="ads-container">
       <!-- Anuncio de Google AdSense -->
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <ins class="adsbygoogle"
@@ -36,5 +57,12 @@
            (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
+    <iframe
+      src="https://luisocana44-docbrain.hf.space"
+      frameborder="0"
+      width="100%"
+      style="float:left;"
+    ></iframe>
   </body>
 </html>
+
