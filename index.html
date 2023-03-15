@@ -3,8 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <title>Iframe de ejemplo</title>
+    <style>
+      /* Estilos para el modo oscuro */
+      body.dark-mode {
+        background-color: #121524;
+        color: white;
+      }
+      body.dark-mode iframe,
+      body.dark-mode .adsbygoogle {
+        background-color: #121524;
+      }
+    </style>
   </head>
-  <body>
+  <body class="dark-mode">
     <iframe
       src="https://luisocana44-docbrain.hf.space"
       frameborder="0"
