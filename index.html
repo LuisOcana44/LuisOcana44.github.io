@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Iframe de ejemplo</title>
+    <title>DocBrain🧠</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       /* Estilos para el modo oscuro */
@@ -12,21 +12,28 @@
         padding: 0;
         display: flex;
         align-items: center;
+        flex-direction: row;
       }
-      iframe,
-      .adsbygoogle {
+      iframe {
         width: 70%;
         height: 800px;
         box-sizing: border-box;
       }
+      .adsbygoogle-container {
+        width: 30%;
+        min-height: 100px;
+        max-height: 250px;
+        box-sizing: border-box;
+      }
       /* Estilos para dispositivos móviles */
       @media only screen and (max-width: 600px) {
-        .adsbygoogle {
-          clear: both;
-          width: 100%;
-        }
         iframe {
           width: 100%;
+        }
+        .adsbygoogle-container {
+          width: 100%;
+          flex-direction: column;
+          align-self: flex-end;
         }
       }
       /* Estilos para el modo oscuro */
@@ -35,7 +42,7 @@
         color: white;
       }
       body.dark-mode iframe,
-      body.dark-mode .adsbygoogle {
+      body.dark-mode .adsbygoogle-container {
         background-color: #121524;
       }
     </style>
@@ -46,7 +53,7 @@
       frameborder="0"
       style="float:left;"
     ></iframe>
-    <div style="width:30%;height:800px;">
+    <div class="adsbygoogle-container">
       <!-- Anuncio de Google AdSense -->
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <ins class="adsbygoogle"
@@ -60,4 +67,4 @@
       </script>
     </div>
   </body>
-</html>
+</html
