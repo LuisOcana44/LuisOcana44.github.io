@@ -10,16 +10,23 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        display: flex;
+        align-items: center;
       }
       iframe,
       .adsbygoogle {
-        width: 100%;
+        width: 70%;
+        height: 800px;
         box-sizing: border-box;
       }
       /* Estilos para dispositivos móviles */
       @media only screen and (max-width: 600px) {
         .adsbygoogle {
           clear: both;
+          width: 100%;
+        }
+        iframe {
+          width: 100%;
         }
       }
       /* Estilos para el modo oscuro */
@@ -37,10 +44,9 @@
     <iframe
       src="https://luisocana44-docbrain.hf.space"
       frameborder="0"
-      height="1500"
       style="float:left;"
     ></iframe>
-    <div style="width:20%;height:800px;">
+    <div style="width:30%;height:800px;">
       <!-- Anuncio de Google AdSense -->
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <ins class="adsbygoogle"
@@ -55,4 +61,3 @@
     </div>
   </body>
 </html>
-
